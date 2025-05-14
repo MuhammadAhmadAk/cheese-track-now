@@ -66,11 +66,12 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     addActivity
   );
 
-  // Create dispatch operations
+  // Create dispatch operations - Pass dispatches as argument
   const { addDispatch, updateDispatch, deleteDispatch } = createDispatchOperations(
     products,
     batches,
     inventory,
+    dispatches,
     setDispatches,
     setInventory,
     setInventoryMutations,

@@ -7,6 +7,7 @@ export function createDispatchOperations(
   products: Product[],
   batches: Batch[],
   inventory: Inventory[],
+  dispatches: Dispatch[],
   setDispatches: React.Dispatch<React.SetStateAction<Dispatch[]>>,
   setInventory: React.Dispatch<React.SetStateAction<Inventory[]>>,
   setInventoryMutations: React.Dispatch<React.SetStateAction<any[]>>,
@@ -74,7 +75,7 @@ export function createDispatchOperations(
   };
   
   const updateDispatch = (updatedDispatch: Dispatch) => {
-    const oldDispatch = inventory.find(d => d.batchId === updatedDispatch.id);
+    const oldDispatch = dispatches.find(d => d.id === updatedDispatch.id);
     if (!oldDispatch) return;
     
     // Update inventory if quantity changed
@@ -132,7 +133,7 @@ export function createDispatchOperations(
   };
   
   const deleteDispatch = (id: string) => {
-    const dispatchToDelete = inventory.find(d => d.id === id);
+    const dispatchToDelete = dispatches.find(d => d.id === id);
     if (!dispatchToDelete) return;
     
     setDispatches(prev => prev.filter(dispatch => dispatch.id !== id));
