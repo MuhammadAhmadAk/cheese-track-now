@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        weidebio: {
+          DEFAULT: '#4a8c89', // Primary teal-green
+          light: '#6ca9a6', // Lighter shade
+          dark: '#336663', // Darker shade
+          50: '#f0f5f5',
+          100: '#d9e6e5',
+          200: '#b3cdcb',
+          300: '#8db4b1',
+          400: '#67a19c',
+          500: '#4a8c89',
+          600: '#3d7371',
+          700: '#305b59',
+          800: '#234341',
+          900: '#152a29',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
